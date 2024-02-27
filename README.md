@@ -1,5 +1,27 @@
-# NodeCG
+# Prerequisites
+Node.js v18 (https://nodejs.org/download/release/v18.19.1/)
+OBS Studio
+VLC Media Player
 
+# How to setup
+Run "npm install" inside the root folder
+Run "npm install --global nodecg-cli@latest" (https://www.nodecg.dev/docs/installing/)
+
+Run "nodecg install speedcontrol/nodecg-speedcontrol" (https://github.com/speedcontrol/nodecg-speedcontrol)
+
+Navigate to bundles/souls-layouts
+Run "npm install" followed by "npm run build"
+
+Navigate back to the root folder
+Run "npm run build" followed by "npm start"
+
+# Twitch integration
+The nodecg-speedcontrol.json file inside has Twitch integration enabled, but lacks clientId and clientSecret. Obtain these from the Twitch developer console (https://dev.twitch.tv/console).
+
+# OBS configuration
+Coming soon
+
+# NodeCG
 [![NodeCG](https://raw.githubusercontent.com/nodecg/nodecg/master/media/splash.png)](https://nodecg.dev/)
 
 [![Discord](https://img.shields.io/discord/754749209722486814.svg?logo=discord)](https://discord.com/invite/GJ4r8a8)

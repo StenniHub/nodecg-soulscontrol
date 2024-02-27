@@ -7,6 +7,7 @@ npm-debug.log
 
 # Local bundles
 #/bundles/**
+/bundles/nodecg-speedcontrol
 
 # Datastores
 /db/**
@@ -45,3 +46,5 @@ docs
 
 # Don't ignore .empty_directory files
 !.empty_directory
+
+/build
