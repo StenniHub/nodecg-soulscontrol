@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "definitions": {
+    "audio": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "tiltify": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enable": { "type": "boolean", "default": false },
+        "token": { "type": "string", "default": "API_ACCESS_TOKEN" },
+        "campaign": { "type": "string", "default": "CAMPAIGN_ID" }
+      },
+      "required": ["enable"]
+    },
+    "obs": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enable": {
+          "type": "boolean",
+          "default": false
+        },
+        "address": {
+          "type": "string",
+          "default": "ws://localhost:4444"
+        },
+        "password": {
+          "type": "string",
+          "default": "1234"
+        },
+        "names": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "scenes": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "intermission": {
+                  "type": "string",
+                  "default": "Intermission"
+                }
+              },
+              "required": ["intermission"]
+            },
+            "audioToMute": {
+              "$ref": "#/definitions/audio"
+            },
+            "audioToUnmute": {
+              "$ref": "#/definitions/audio"
+            }
+          },
+          "required": ["scenes", "audioToMute", "audioToUnmute"]
+        }
+      },
+      "required": ["enable", "address", "names"]
+    }
+  },
+  "required": ["obs", "tiltify"]
+}

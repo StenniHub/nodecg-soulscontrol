@@ -1,0 +1,28 @@
+@import url('font.css');
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: white;
+  font-family: 'Europa Grotesk SH DemBol';
+}
+
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.highlight {
+  color: #00ff82;
+}
