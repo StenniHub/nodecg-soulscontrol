@@ -1,0 +1,12 @@
+{
+    "logging": {
+        "file": {
+            "enabled": true,
+            "level": "debug"
+        },
+        "console": {
+            "enabled": true,
+            "level": "debug"
+        }
+    }
+}

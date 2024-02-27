@@ -1,0 +1,19 @@
+{
+  "tiltify": {
+    "enable": false,
+    "token": "",
+    "campaign": ""
+  },
+  "obs": {
+    "enable": true,
+    "address": "ws://localhost:4444",
+    "password": "",
+    "names": {
+      "scenes": {
+        "intermission": "Intermission"
+      },
+      "audioToMute": [],
+      "audioToUnmute": []
+    }
+  }
+}
