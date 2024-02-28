@@ -5,14 +5,17 @@ VLC Media Player
 
 # How to setup
 Run "npm install" inside the root folder
+
 Run "npm install --global nodecg-cli@latest" (https://www.nodecg.dev/docs/installing/)
 
 Run "nodecg install speedcontrol/nodecg-speedcontrol" (https://github.com/speedcontrol/nodecg-speedcontrol)
 
 Navigate to bundles/souls-layouts
+
 Run "npm install" followed by "npm run build"
 
 Navigate back to the root folder
+
 Run "npm run build" followed by "npm start"
 
 # Twitch integration
