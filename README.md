@@ -1,7 +1,9 @@
 # Prerequisites
 Node.js v18 (https://nodejs.org/download/release/v18.19.1/)
-OBS Studio
-VLC Media Player
+
+OBS Studio (https://obsproject.com/)
+
+VLC Media Player (https://www.videolan.org/)
 
 # How to setup
 Run "npm install" inside the root folder
@@ -16,14 +18,21 @@ Run "npm install" followed by "npm run build"
 
 Navigate back to the root folder
 
-Run "npm run build" followed by "npm start"
+Run "npm run build" followed by "npm run start"
 
 # Twitch integration
 The nodecg-speedcontrol.json file inside has Twitch integration enabled, but lacks clientId and clientSecret. Obtain these from the Twitch developer console (https://dev.twitch.tv/console).
 
 # OBS configuration
-Coming soon
+Click scene collection > import on the toolbar at the top and import the included scene collection.
 
+Under tools > websocket server settings make sure the port is set to 4444 (same as cfg/souls-layouts.json) and disable authorization.
+
+After launching nodecg with "npm run start" you should see websocket connection being successful.
+
+If you are not seeing the layout in OBS, restarting OBS can sometimes fix the issue. Otherwise verify the correct scene collection is selected and that all install and build steps for nodecg have been completed.
+
+==== Below is the original README from NodeCG ====
 # NodeCG
 [![NodeCG](https://raw.githubusercontent.com/nodecg/nodecg/master/media/splash.png)](https://nodecg.dev/)
 
