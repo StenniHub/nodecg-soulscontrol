@@ -4,20 +4,13 @@
       v-if="activeRun && activeRun.data"
       :key="`${activeRun.data.game}${activeRun.data.category}`"
       class="Flex"
-      :style="{ position: 'absolute', 'flex-direction': 'column' }"
+      :style="{ position: 'absolute', 'flex-direction': 'row', 'flex-wrap': 'wrap' }"
     >
       <div
         v-if="activeRun && activeRun.data"
         :style="{ 'white-space': 'normal', fontSize: '2em' }"
         ref="game"
         id="game"
-      >
-        {{ activeRun.data.game }}
-      </div>
-      <div
-        v-if="activeRun && activeRun.data"
-        :style="{ color: '#cccccc', fontSize: '2em' }"
-        id="category"
       >
         {{ activeRun.data.category }}
       </div>

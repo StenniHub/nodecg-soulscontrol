@@ -1,15 +1,106 @@
-<style>
-  @import url('../_misc/common.css');
-  @import url('../_misc/Fade.css');
-  @import url('../_misc/Flex.css');
-</style>
+<template>
+  <div>
+    <img src="./background.png" />
+    <Timer
+      :style="{
+        left: '804px',
+        bottom: '566px',
+        width: '313px',
+        height: '85px',
+        fontSize: '12px',
+      }"
+      :use-small-padding="true"
+    />
+    <Game
+      :style="{
+        left: '804px',
+        bottom: '441px',
+        width: '313px',
+        height: '85px',
+      }"
+      :size=36
+    />
+    <Player
+      :style="{
+        left: '553px',
+        bottom: '970px',
+        width: '207px',
+        height: '62px',
+      }"
+     :team="1"
+     key="team1"
+     :size=32
+    />
+   <Player
+      :style="{
+        left: '553px',
+        bottom: '513px',
+        width: '207px',
+        height: '62px',
+      }"
+     :team="2"
+     key="team2"
+     :size=32
+    />
+ <Player
+      :style="{
+        left: '1700px',
+        bottom: '513px',
+        width: '207px',
+        height: '62px',
+      }"
+    :team="3"
+    key="team3"
+    :size=32
+    />
+    <Player
+      :style="{
+        left: '1700px',
+        bottom: '970px',
+        width: '207px',
+        height: '62px',
+      }"
+    :team="4"
+    key="team4"
+    :size=32
+    />
+    <Player
+      :style="{
+        left: '804px',
+        bottom: '316px',
+        width: '313px',
+        height: '62px',
+      }"
+    :team="5"
+    key="team5"
+    :size=26
+    />
+    <UpcomingRun
+      :run-data="onDeck"
+      :style="{
+        left: '768px',
+        bottom: '35px',
+        width: '1077px',
+        height: '100px',
+      }"
+    />
+    <UpcomingRun
+      :run-data="nextRun"
+      :style="{
+        left: '102px',
+        bottom: '35px',
+        width: '600px',
+        height: '100px',
+      }"
+    />
+  </div>
+</template>
 
 <script setup lang="ts">
   import Game from '../_misc/components/Game.vue';
   import Player from '../_misc/components/Player.vue';
   import Timer from '../_misc/components/Timer.vue';
-
- import UpcomingRun from './components/UpcomingRun.vue';
+  import UpcomingRun from '../_misc/components/UpcomingRun.vue';
   import { RunData } from '../../../../nodecg-speedcontrol/src/types';
   import {
     RunDataActiveRunSurrounding,
@@ -52,6 +143,7 @@
   }
 
   onMounted(() => {
+    console.log("test");
     setTimeout(() => {
       updateNextRuns();
     }, 200);
@@ -95,52 +187,8 @@
   }
 </script>
 
-<template>
-  <div>
-    <img src="./background.png" />
-    <Timer
-      :style="{
-        left: '740px',
-        bottom: '487px',
-        width: '486px',
-        height: '88px',
-        fontSize: '12px',
-      }"
-      :use-small-padding="true"
-    />
-   <UpcomingRun
-      :run-data="onDeck"
-      :style="{
-        left: '450px',
-        top: '935px',
-        width: '1080px',
-        height: '120px',
-      }"
-    />
-    <Game
-      :style="{
-        left: '780px',
-        bottom: '370px',
-        width: '376px',
-        height: '92px',
-      }"
-      :size="37"
-    />
-    <Player
-      :style="{
-        left: '730px',
-        bottom: '620px',
-        width: '486px',
-        height: '92px',
-      }"
-    />
- <Commentator
-      :style="{
-        left: '0px',
-        bottom: '382px',
-        width: '486px',
-        height: '92px',
-      }"
-    />
-  </div>
-</template>
+<style>
+  @import url('../_misc/common.css');
+  @import url('../_misc/Fade.css');
+  @import url('../_misc/Flex.css');
+</style>

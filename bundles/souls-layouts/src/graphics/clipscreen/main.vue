@@ -2,28 +2,22 @@
   <div>
     <img src="./background.png" />
     <UpcomingRun
-      :run-data="nextRun"
-      :style="{
-        left: '207px',
-        top: '950px',
-        width: '780px',
-        height: '120px',
-      }"
-    />
-    <UpcomingRun
       :run-data="onDeck"
       :style="{
-        left: '907px',
-        top: '950px',
-        width: '780px',
-        height: '120px',
+        left: '245px',
+        bottom: '18px',
+        width: '1422px',
+        height: '109px',
       }"
     />
   </div>
 </template>
 
 <script setup lang="ts">
-  import UpcomingRun from './components/UpcomingRun.vue';
+  import Game from '../_misc/components/Game.vue';
+  import Player from '../_misc/components/Player.vue';
+  import Timer from '../_misc/components/Timer.vue';
+  import UpcomingRun from '../_misc/components/UpcomingRun.vue';
   import { RunData } from '../../../../nodecg-speedcontrol/src/types';
   import {
     RunDataActiveRunSurrounding,
@@ -66,6 +60,7 @@
   }
 
   onMounted(() => {
+    console.log("test");
     setTimeout(() => {
       updateNextRuns();
     }, 200);
