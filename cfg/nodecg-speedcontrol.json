@@ -5,7 +5,7 @@
         "clientID": "",
         "clientSecret": "",
         "redirectURI": "http://localhost:9090/nodecg-speedcontrol/twitchauth",
-        "streamTitle": "Dark Souls II 10 Year Anniversary - {{game}} {{category}} by {{players}} !donate !schedule",
+        "streamTitle": "Dark Souls II 10 Year Anniversary - {{game}} {{category}} by {{players}} !schedule",
         "streamDefaultGame": "Dark Souls II",
         "ffzIntegration": false,
         "ffzUseRepeater": false
