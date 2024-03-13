@@ -101,7 +101,6 @@
   }
 
   onMounted(() => {
-    console.log("test");
     setTimeout(() => {
       updateNextRuns();
     }, 200);
