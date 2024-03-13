@@ -1,22 +1,96 @@
 <template>
   <div>
     <img src="./background.png" />
-    <UpcomingRun
-      :run-data="nextRun"
+    <Timer
       :style="{
-        left: '629px',
-        bottom: '236px',
-        width: '717px',
-        height: '109px',
+        left: '804px',
+        bottom: '867px',
+        width: '313px',
+        height: '85px',
+        fontSize: '12px',
       }"
+      :use-small-padding="true"
+    />
+    <Game
+      :style="{
+        left: '804px',
+        bottom: '751px',
+        width: '313px',
+        height: '85px',
+      }"
+      :size=36
+    />
+    <Player
+      :style="{
+        left: '543px',
+        bottom: '977px',
+        width: '207px',
+        height: '62px',
+      }"
+     :team="1"
+     key="team1"
+     :size=32
+    />
+   <Player
+      :style="{
+        left: '543px',
+        bottom: '525px',
+        width: '207px',
+        height: '62px',
+      }"
+     :team="2"
+     key="team2"
+     :size=32
+    />
+ <Player
+      :style="{
+        left: '1695px',
+        bottom: '525px',
+        width: '207px',
+        height: '62px',
+      }"
+    :team="3"
+    key="team3"
+    :size=32
+    />
+    <Player
+      :style="{
+        left: '1695px',
+        bottom: '977px',
+        width: '207px',
+        height: '62px',
+      }"
+    :team="4"
+    key="team4"
+    :size=32
+    />
+    <Player
+      :style="{
+        left: '804px',
+        bottom: '635px',
+        width: '313px',
+        height: '62px',
+      }"
+    :team="5"
+    key="team5"
+    :size=26
     />
     <UpcomingRun
       :run-data="onDeck"
       :style="{
-        left: '246px',
-        bottom: '110px',
-        width: '1422px',
-        height: '109px',
+        left: '768px',
+        bottom: '35px',
+        width: '1077px',
+        height: '100px',
+      }"
+    />
+    <UpcomingRun
+      :run-data="nextRun"
+      :style="{
+        left: '102px',
+        bottom: '35px',
+        width: '600px',
+        height: '100px',
       }"
     />
   </div>

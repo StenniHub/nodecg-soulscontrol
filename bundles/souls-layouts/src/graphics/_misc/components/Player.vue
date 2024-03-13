@@ -10,7 +10,7 @@
         <div ref="player">
           {{ name }}
           <span v-if="finishTime" :style="{ 'font-size': '0.75em' }">
-            [{{ finishTime }}]
+            {{ finishTime }}
           </span>
         </div>
       </div>
@@ -63,7 +63,7 @@
             return timer.data.teamFinishTimes[activeRun.data.teams[teamI].id]
               .time;
           } else if (teamFinishTime.state === 'forfeit') {
-            return 'Forfeit';
+            return '';
           }
         }
       }
