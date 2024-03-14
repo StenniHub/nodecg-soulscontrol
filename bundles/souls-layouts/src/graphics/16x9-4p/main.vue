@@ -13,10 +13,10 @@
     />
     <Game
       :style="{
-        left: '804px',
-        bottom: '441px',
-        width: '313px',
-        height: '85px',
+        left: '814px',
+        bottom: '445px',
+        width: '290px',
+        height: '80px',
       }"
       :size=36
     />

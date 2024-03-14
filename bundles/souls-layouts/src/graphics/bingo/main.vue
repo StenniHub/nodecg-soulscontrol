@@ -15,10 +15,10 @@
       :style="{
         left: '804px',
         bottom: '751px',
-        width: '313px',
-        height: '85px',
+        width: '250px',
+        height: '60px',
       }"
-      :size=36
+      :size=24
     />
     <Player
       :style="{
